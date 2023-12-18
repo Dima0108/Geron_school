@@ -1,0 +1,1 @@
+(()=>{let o=0;Object.entries({tech:{employersCount:10,jobsCount:5},design:{employersCount:10,jobsCount:5}}).forEach((([e,t])=>{o+=t.jobsCount}))})();
