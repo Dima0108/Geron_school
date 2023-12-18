@@ -707,4 +707,3 @@ console.log(getCourse('college', 150));
 
 import { seasons } from "./data";
 
-
