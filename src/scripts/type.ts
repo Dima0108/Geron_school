@@ -6,10 +6,3 @@ type TSeason = {
     newProjects: number
 }
 
-export type TSeasons = {
-    winter:TSeason,
-    spring:TSeason,
-    summer:TSeason,
-    autumn:TSeason
-}
-
