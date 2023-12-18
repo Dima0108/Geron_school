@@ -705,6 +705,5 @@ console.log(getCourse('college', 150));
 
 // --------------------------------------------------------------------- OutFile. Import. Export. WebPack
 
-import { seasons } from "./data";
-
+// import { seasons } from "./data";
 
