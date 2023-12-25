@@ -248,35 +248,72 @@
 
 // -----------
 
-const getData = async () => {
-  return fetch("https://jsonplaceholder.typicode.com/posts/1") 
-}
+// const getData = async () => {
+//   return fetch("https://jsonplaceholder.typicode.com/posts/1") 
+// }
+
+// type TUser = {
+//   nameId: number,
+//   id: number,
+//   body: string,
+//   title: string
+// }
+
+// const getResult = async (status) => {
+//   let user: TUser = await (await getData()).json()
+//   return new Promise((resolve, reject) =>{
+//     setTimeout(() => {
+//       if(status) {
+//         resolve(user);
+//       } else {
+//         reject(new Error("Произошла ошибка"));
+//       }
+//     },1000)
+//   })
+// }
+
+// const checkResult = async () => {
+//   let user = await getResult(true) as TUser
+//     console.log(user)
+// }
+// checkResult().catch((error) => {
+//   console.log(error)
+// }) 
+
+// --------------------------------------------------------------------------------------------------
 
 type TUser = {
-  nameId: number,
-  id: number,
-  body: string,
-  title: string
+  postId: number;
+  id: number;
+  name: string;
+  email: string;
+  body: string;
+};
+
+const getData = async () => {
+  return fetch("https://jsonplaceholder.typicode.com/posts/1/comments")
 }
 
-const getResult = async (status) => {
-  let user: TUser = await (await getData()).json()
-  return new Promise((resolve, reject) =>{
-    setTimeout(() => {
-      if(status) {
-        resolve(user);
-      } else {
-        reject(new Error("Произошла ошибка"));
-      }
-    },1000)
+const getResult = async () => {
+  let data:TUser[] = await(await getData()).json()
+    return data
+}
+
+const findUser = async () => {
+  let users:TUser[] = await getResult()
+  let userBody:TUser | null = null
+  users.forEach(user => {
+    if(!userBody || userBody.body.length < user.body.length) {
+      userBody = user
+    }
   })
+  return userBody
 }
 
-const checkResult = async () => {
-  let user = await getResult(true) as TUser
-    console.log(user)
-}
-checkResult().catch((error) => {
-  console.log(error)
-}) 
-
+findUser()
+  .then((data) => {
+    console.log(data)
+  })
+  .catch((error) => {
+    console.log(error)
+  }) 

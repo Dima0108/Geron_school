@@ -1,1 +1,1 @@
-(async()=>{let e=await(async e=>{let o=await(await(async()=>fetch("https://jsonplaceholder.typicode.com/posts/1"))()).json();return new Promise(((t,s)=>{setTimeout((()=>{e?t(o):s(new Error("Произошла ошибка"))}),1e3)}))})(!0);console.log(e)})().catch((e=>{console.log(e)}));
+(async()=>{let o=await(async()=>await(await(async()=>fetch("https://jsonplaceholder.typicode.com/posts/1/comments"))()).json())(),t=null;return o.forEach((o=>{(!t||t.body.length<o.body.length)&&(t=o)})),t})().then((o=>{console.log(o)})).catch((o=>{console.log(o)}));
