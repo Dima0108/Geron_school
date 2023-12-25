@@ -233,7 +233,7 @@
 // console.log(calculateDetailCost);
 
 
-// --------------------------------- 25.12.23 --------------------------------------------
+// --------------------------------- 25.12.23 Time Async Promise --------------------------------------------
 
 // const getName = () => {
 //     console.log("name")
@@ -248,16 +248,19 @@
 
 // -----------
 
+const getData = async () => {
+  return fetch("https://jsonplaceholder.typicode.com/posts/1") 
+}
+
 type TUser = {
-  name: string,
-  age: number
+  nameId: number,
+  id: number,
+  body: string,
+  title: string
 }
 
 const getResult = async (status) => {
-  let user: TUser = {
-    name: 'Dima',
-    age: 17
-  }
+  let user: TUser = await (await getData()).json()
   return new Promise((resolve, reject) =>{
     setTimeout(() => {
       if(status) {
@@ -271,19 +274,9 @@ const getResult = async (status) => {
 
 const checkResult = async () => {
   let user = await getResult(true) as TUser
-      // .then(response => {
-      //   console.log()
-      // })
-      // .catch(error => {
-      //   console.log(error)
-      // })
-      // .finally(() => {
-      //   console.log('Работа промисс завершина')
-      // })
-    console.log(`Имя: ${user.name} возраст: ${user.age}`)
+    console.log(user)
 }
 checkResult().catch((error) => {
   console.log(error)
-})
+}) 
 
-// fetch() 

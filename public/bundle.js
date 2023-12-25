@@ -1,1 +1,1 @@
-(async()=>{let e=await(async e=>{let a={name:"Dima",age:17};return new Promise(((e,n)=>{setTimeout((()=>{e(a)}),1e3)}))})();console.log(`Имя: ${e.name} возраст: ${e.age}`)})().catch((e=>{console.log(e)}));
+(async()=>{let e=await(async e=>{let o=await(await(async()=>fetch("https://jsonplaceholder.typicode.com/posts/1"))()).json();return new Promise(((t,s)=>{setTimeout((()=>{e?t(o):s(new Error("Произошла ошибка"))}),1e3)}))})(!0);console.log(e)})().catch((e=>{console.log(e)}));
