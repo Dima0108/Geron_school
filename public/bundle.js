@@ -1,1 +1,1 @@
-console.log((h=>h.width*h.height/h.weight*150));
+(async()=>{let e=await(async e=>{let a={name:"Dima",age:17};return new Promise(((e,n)=>{setTimeout((()=>{e(a)}),1e3)}))})();console.log(`Имя: ${e.name} возраст: ${e.age}`)})().catch((e=>{console.log(e)}));
