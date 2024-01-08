@@ -282,38 +282,55 @@
 
 // --------------------------------------------------------------------------------------------------
 
-type TUser = {
-  postId: number;
-  id: number;
-  name: string;
-  email: string;
-  body: string;
-};
+// type TUser = {
+//   postId: number;
+//   id: number;
+//   name: string;
+//   email: string;
+//   body: string;
+// };
 
-const getData = async () => {
-  return fetch("https://jsonplaceholder.typicode.com/posts/1/comments")
-}
+// const getData = async () => {
+//   return fetch("https://jsonplaceholder.typicode.com/posts/1/comments")
+// }
 
-const getResult = async () => {
-  let data:TUser[] = await(await getData()).json()
-    return data
-}
+// const getResult = async () => {
+//   let data:TUser[] = await(await getData()).json()
+//     return data
+// }
 
-const findUser = async () => {
-  let users:TUser[] = await getResult()
-  let userBody:TUser | null = null
-  users.forEach(user => {
-    if(!userBody || userBody.body.length < user.body.length) {
-      userBody = user
-    }
-  })
-  return userBody
-}
+// const findUser = async () => {
+//   let users:TUser[] = await getResult()
+//   let userBody:TUser | null = null
+//   users.forEach(user => {
+//     if(!userBody || userBody.body.length < user.body.length) {
+//       userBody = user
+//     }
+//   })
+//   return userBody
+// }
 
-findUser()
-  .then((data) => {
-    console.log(data)
-  })
-  .catch((error) => {
-    console.log(error)
-  }) 
+// findUser()
+//   .then((data) => {
+//     console.log(data)
+//   })
+//   .catch((error) => {
+//     console.log(error)
+
+// ----------------------------------------------------------------
+
+// import { Order } from './src/scripts/data/Order';
+
+// const user = "Дима Желнин";
+// const address = "г.Павлодар, ул.Чокина, дом 103, кв40";
+// const sum = 30000;
+
+// const order = new Order({ user, address, sum});
+
+// order.newAddress = "г.Павлодар, ул.Торайгырова, дом 103"
+
+// console.log(order.getInfoOrder());
+
+
+// ----------------------------------------------------------------
+
