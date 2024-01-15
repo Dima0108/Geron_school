@@ -334,3 +334,10 @@
 
 // ----------------------------------------------------------------
 
+
+
+import { Products } from "./src/models/Product";
+
+const productsStore = new Products();
+
+console.log(productsStore.allStorages)

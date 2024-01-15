@@ -1,0 +1,82 @@
+[
+    {
+        "product_name": "Laptop",
+        "company_name": "Electronics Ltd",
+        "quantity": 15,
+        "pricePerUnit": 45000,
+        "id": 1,
+        "storageId": 1
+    },
+    {
+        "product_name": "Smartphone",
+        "company_name": "Gadget Master",
+        "quantity": 50,
+        "pricePerUnit": 670000,
+        "id": 3,
+        "storageId": 3
+    },
+    {
+        "product_name": "Printer",
+        "company_name": "Print Solutions Inc",
+        "quantity": 34,
+        "pricePerUnit": 40000,
+        "id": 1,
+        "storageId": 3
+    },
+    {
+        "product_name": "Tablet",
+        "company_name": "Tech Innovations",
+        "quantity": 70,
+        "pricePerUnit": 60000,
+        "id": 3,
+        "storageId": 1
+    },
+    {
+        "product_name": "Camera",
+        "company_name": "Photo Gear Co",
+        "quantity": 9,
+        "pricePerUnit": 15000,
+        "id": 2,
+        "storageId": 4
+    },
+    {
+        "product_name": "Headphones",
+        "company_name": "Sound Technologies",
+        "quantity": 3,
+        "pricePerUnit": 55000,
+        "id": 3,
+        "storageId": 2
+    },
+    {
+        "product_name": "External Hard Drive",
+        "company_name": "Storage Solutions Ltd",
+        "quantity": 30,
+        "pricePerUnit": 300000,
+        "id": 4,
+        "storageId": 2
+    },
+    {
+        "product_name": "Monitor",
+        "company_name": "Visual Displays Inc",
+        "quantity": 7,
+        "pricePerUnit": 25000,
+        "id": 3,
+        "storageId": 2
+    },
+    {
+        "product_name": "Keyboard",
+        "company_name": "Input Devices Co",
+        "quantity": 25,
+        "pricePerUnit": 4000,
+        "id": 2,
+        "storageId": 2
+    },
+    {
+        "product_name": "Mouse",
+        "company_name": "Pointing Devices Ltd",
+        "quantity": 5,
+        "pricePerUnit": 5000,
+        "id": 3,
+        "storageId": 2
+    }
+]
